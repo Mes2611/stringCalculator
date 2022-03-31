@@ -16,10 +16,11 @@ public class StringCalculator
             newNumbers = numbers;
         }
         String delimeter = defaultDelimeter + "|\n";
-        ArrayList<String> list = new ArrayList<>();
+        ArrayList<String> listNumbers = new ArrayList<>();
+
         if(!newNumbers.isEmpty()) {
-           list.addAll(Arrays.stream(newNumbers.split(delimeter)).collect(Collectors.toList()));
-        return list.stream().mapToInt(Integer::parseInt).sum();
+           listNumbers.addAll(Arrays.stream(newNumbers.split(delimeter)).collect(Collectors.toList()));
+        return listNumbers.stream().mapToInt(Integer::parseInt).sum();
        }
         return 0;
     }
