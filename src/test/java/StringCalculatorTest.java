@@ -24,4 +24,9 @@ public class StringCalculatorTest
     public void shouldReturn26ForUnknowNumbers() {
         Assert.assertEquals(stringCalculator.add("1,2,3,10,10"), 26);
     }
+
+    @Test
+    public void shouldReturn6ForTwoDelimeter() {
+        Assert.assertEquals(stringCalculator.add("1\n2,3"), 6);
+    }
 }
