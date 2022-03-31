@@ -8,7 +8,7 @@ public class StringCalculator
     public int add(String numbers) {
         ArrayList<String> list = new ArrayList<>();
         if(!numbers.isEmpty()) {
-           list.addAll(Arrays.stream(numbers.split(",")).collect(Collectors.toList()));
+           list.addAll(Arrays.stream(numbers.split(",|\n")).collect(Collectors.toList()));
         return list.stream().mapToInt(Integer::parseInt).sum();
        }
         return 0;
