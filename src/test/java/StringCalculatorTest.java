@@ -22,6 +22,6 @@ public class StringCalculatorTest
 
     @Test
     public void shouldReturn26ForUnknowNumbers() {
-        Assert.assertEquals(stringCalculator.add("1,2,3", "10,10"), 26);
+        Assert.assertEquals(stringCalculator.add("1,2,3,10,10"), 26);
     }
 }
