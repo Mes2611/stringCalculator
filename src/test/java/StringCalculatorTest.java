@@ -46,4 +46,18 @@ public class StringCalculatorTest
     {
         Assert.assertEquals(stringCalculator.add("//&\n1&2&3"), 6);
     }
+
+    @Test
+    public void shouldThrowsExceptionWithNegativesValues()
+    {
+        try
+        {
+            stringCalculator.add("1,-2,-5,4");
+        }
+        catch (IllegalArgumentException e)
+        {
+            Assert.assertEquals(e.getMessage(), "negatives not allowed [-2, -5]");
+        }
+
+    }
 }
